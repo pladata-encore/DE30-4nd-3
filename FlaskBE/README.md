@@ -1,9 +1,7 @@
 # Flask backend server
 
----
-## 📄 개발 환경 
+## 📄 개발 환경
 
----
 * python version : 3.9.10
 * OS : Windows 11
 * IDE : pycharm 
@@ -15,7 +13,7 @@
   * pip == 24.1
   * setuptools==70.1.0
 
----
+
 
 ## 📄 Directory Tree
 ### Project Tree
@@ -31,14 +29,14 @@ app
  ┣ extensions.py
  ┗ __init__.py
 ```
----
+
 
 ## 📄 API Documentation
 
----
+
 ## 📍 Endpoint
 
----
+
 ### /whitezoneAnalysis/
 * /phases/ : (GET) 모든 phase 데이터를 반환
 * /phase/{int:phase_number} : (GET) 특정 phase 데이터를 반환
@@ -48,12 +46,12 @@ app
 
 ## 📍 API Specification
 
----
+
 ### /whitezoneAnalysis/phases
 * Request
-  * Method : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">GET</span>
+  * Method : `GET`
 * Response
-  * Status : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">200</span>
+  * Status : `200`
     * Body
     ```python
       {
@@ -131,12 +129,12 @@ app
            ],
       }
     ```
----
+
 ### /whitezoneAnalysis/phase/{int: phase_number}
 * Request
-  * Method : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">GET</span>
+  * Method : `GET`
 * Response
-  * Status : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">200</span>
+  * Status : `200`</span>`
     * Body
     ```python
       {
@@ -151,12 +149,12 @@ app
            ]          
       }
     ```
----
+
 ### /whitezoneAnalysis/phase/{int: phase_number}/{int: data_number}
 * Request
-  * Method: <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">GET</span>
+  * Method: `GET`
 * Response
-  * Status : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">200</span>
+  * Status : `200`
     * Body
     ```python
       {
@@ -186,7 +184,7 @@ app
     }
     ```
 * Error Response
-  * Status : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">413</span>
+  * Status : `413`
     * Body
     ```python
       {
@@ -194,11 +192,11 @@ app
         "message": "Input data counts exceeds the number of records in the database."
       }
     ```
----
+
 ### /whitezoneAnalysis/insert/phase
 
 * Request
-  * Method : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">POST</span>
+  * Method : `POST`
     * Body :
     ```python
       {
@@ -213,10 +211,10 @@ app
       }
     ``` 
 * Response
-  * Status : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">200</span>
+  * Status : `200`
  
 * Error Response
-  * Status : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">400</span>
+  * Status : `400`
     * 요청 형식이 JSON이 아닌 경우
     * Body
     ```python
@@ -226,7 +224,7 @@ app
       }
     ```
     
-  * Status : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">401</span>
+  * Status : `401`
     * body의 JSON에 'table','data' 필드가 존재하지 않은 경우 
     * Body
     ```python
@@ -235,7 +233,7 @@ app
         "message" : "Request must include 'table' and 'data'"
       }
     ```
-  * Status : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">403</span>
+  * Status : `403`
     * 'data'의 하위 필드가 없는 경우 
     * Body
     ```python
@@ -244,7 +242,7 @@ app
         "message" : "Missing Data Fields"
       }
     ```
-  * Status : <span style="background-color: #F5F5F5; color: black; padding: 2px 4px; border-radius: 3px;">404</span>
+  * Status : `404`
     * 'Table' 명이 유효하지 않은 경우 
     * Body
     ```python
