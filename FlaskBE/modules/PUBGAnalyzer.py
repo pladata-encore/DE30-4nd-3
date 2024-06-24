@@ -1,7 +1,6 @@
 import datetime
 from datetime import datetime
 
-
 class PubgAnalyzer:
     def __init__(self, data):
         self.data = data
