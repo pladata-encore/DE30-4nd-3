@@ -1,6 +1,6 @@
 import time
 import random
-from getAPIToJson_erangel import getApiToJson
+from getAPIToJson_miramar import getApiToJson
 from PUBGAnalyzer import PubgAnalyzer
 from PostJsonToAPI import PostJsonToApi
 
