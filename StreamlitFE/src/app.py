@@ -4,12 +4,12 @@ from report import report
 from data import data
 
 
-st.sidebar.title("이동하기")
-page = st.sidebar.selectbox("페이지 이동하기", ["메인", "분석 결과", "데이터"])
+st.sidebar.title("Menu")
+page = st.sidebar.selectbox("Pages move on", ["Main", "Analysis Results", "Data"])
 
-if page == "메인":
+if page == "Main":
     main()
-elif page == "분석 결과":
+elif page == "Analysis Results":
     report()
-elif page == "데이터":
+elif page == "Data":
     data()
