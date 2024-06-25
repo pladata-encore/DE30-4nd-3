@@ -1,8 +1,8 @@
 import time
 import random
-from getAPIToJson_miramar import getApiToJson
-from PUBGAnalyzer import PubgAnalyzer
-from PostJsonToAPI import PostJsonToApi
+from modules.getAPIToJson_miramar import getApiToJson
+from modules.PUBGAnalyzer import PubgAnalyzer
+from modules.PostJsonToAPI import PostJsonToApi
 
 count = 1
 def APICrawling(platform, playerName, api_key):
@@ -40,7 +40,7 @@ def APICrawling(platform, playerName, api_key):
                 # 9페이즈는 없으므로 패스
                 if phase_count == 9:
                     break
-                Poster = PostJsonToApi(url="http://192.168.0.79:5000", endPoint="/whitezoneAnalysis/insert/phase", phaseNum=phase_count, matchId=random_matchID, user_x=y[0], user_y=y[1], real_x=x[0], real_y=x[1])
+                Poster = PostJsonToApi(url="http://127.0.0.1:5000", endPoint="/whitezoneAnalysis/insert/phase", phaseNum=phase_count, matchId=random_matchID, user_x=y[0], user_y=y[1], real_x=x[0], real_y=x[1])
                 Poster.postData()
                 phase_count += 1
             count += 1
@@ -66,4 +66,3 @@ def APICrawling(platform, playerName, api_key):
                 bool_switch = True
             else:
                 bool_switch = False
-
