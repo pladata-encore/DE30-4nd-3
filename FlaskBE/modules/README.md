@@ -4,15 +4,15 @@
 
 ## 디렉토리 구조
 
-module/
-├── __init__.py
-├── __main__.py
-├── ApiCrawling.py
-├── getAPIToJson.py
-├── getAPIToJson_miramar.py
-├── PostJsonToAPI.py
-├── PUBGAnalyzer.py
-└── README.md
+module/  
+├── __init__.py  
+├── __main__.py  
+├── ApiCrawling.py  
+├── getAPIToJson.py  
+├── getAPIToJson_miramar.py  
+├── PostJsonToAPI.py  
+├── PUBGAnalyzer.py  
+└── README.md  
 
 ## 개요
 
@@ -23,7 +23,7 @@ module/
 - `getAPIToJson_miramar.py`: `Miramar`맵의 API데이터를 받아오고 받아온 API에서 특정 데이터들을 뽑아내는 역할을 합니다.
 - `PostJsonToAPI.py`: 분석을 위해 전처리된 데이터들을 DB의 형식에 맞게 API로 POST하는 역할을 합니다.
 - `PUBGAnalyzer.py`: 받아온 데이터에서 분석에 필요한 값들을 추출하고, 분석을 위해 전처리를 수행하는 역할을 합니다.
-- `README.md`: 
+- `README.md`: 해당 디렉터리의 목적, 구조, 주요 파일 설명, 사용법 등을 적은 MarkDown 파일입니다.
 
 ## 사용방법
 
@@ -36,7 +36,7 @@ python -m __main__.py
 필요에 따라 특정 모듈을 개별적으로 실행할 수도 있습니다. 예를 들어 다음과 같습니다:
 
 ```bash
-python -m PostJsonToAPI.py
+python -m module.PostJsonToAPI.py
 ```
 
 종속성
