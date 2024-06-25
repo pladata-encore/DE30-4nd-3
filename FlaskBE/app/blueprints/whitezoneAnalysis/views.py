@@ -86,11 +86,11 @@ def create_phase():
     print(data)
 
     if 'table' not in data or 'data' not in data:
-        abort(401, description="Request must include 'table' and 'data'")
+        abort(400, description="Request must include 'table' and 'data'")
     # 400 error2
     if 'match_id' not in data['data'] or 'user_geometry_center_x' not in data['data'] or 'user_geometry_center_y' not in \
             data['data'] or 'white_zone_center_x' not in data['data'] or 'white_zone_center_y' not in data['data']:
-        abort(403, description="Missing Data Fields")
+        abort(400, description="Missing Data Fields")
 
     # 400 error3
     required_fields = ['match_id', 'user_geometry_center_x', 'user_geometry_center_y', 'white_zone_center_x',
@@ -132,24 +132,11 @@ def handle_bad_request_error(e):
     response.status_code = 400
     return response
 
-@whitezoneAnalysis_bp.errorhandler(401)
-def handle_unauthorized_error(e):
-    response = jsonify(error="Unauthorized Error", message=str(e.description))
-    response.status_code = 401
-    return response
-
-@whitezoneAnalysis_bp.errorhandler(403)
-def handle_forbidden_error(e):
-    response = jsonify(error="Forbidden Error", message=str(e.description))
-    response.status_code = 403
-    return response
-
 @whitezoneAnalysis_bp.errorhandler(404)
 def handle_not_found_error(e):
     response = jsonify(error="Not Found Error", message=str(e.description))
     response.status_code = 404
     return response
-
 @whitezoneAnalysis_bp.errorhandler(413)
 def handle_excess_data_error(e):
     response = jsonify(error="Payload Too Large Error", message=str(e.description))
