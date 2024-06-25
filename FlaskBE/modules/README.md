@@ -4,14 +4,14 @@
 
 ## 디렉토리 구조
 
-module/
-├── __init__.py
-├── __main__.py
-├── ApiCrawling.py
-├── getAPIToJson.py
-├── getAPIToJson_miramar.py
-├── PostJsonToAPI.py
-├── PUBGAnalyzer.py
+module/  
+├── __init__.py  
+├── __main__.py  
+├── ApiCrawling.py  
+├── getAPIToJson.py  
+├── getAPIToJson_miramar.py  
+├── PostJsonToAPI.py  
+├── PUBGAnalyzer.py  
 └── README.md
 
 ## 개요
