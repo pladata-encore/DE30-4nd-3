@@ -1,4 +1,4 @@
-# Streamlit Fronted UI
+# Streamlit Frontend UI
 ## 📄 개발 환경 
 * Python version : 3.9.10
 * OS : Windows 11
