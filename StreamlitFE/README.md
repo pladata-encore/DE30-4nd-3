@@ -12,6 +12,6 @@
   * setuptools == 58.1.0
 ## 📄 UI Design
 ### Main page
-![Frontend1](image/Frontend1.png)
+![Frontend1](../image/Frontend1.png)
 ### Analysis Results page
-![Frontend2](image/Frontend2.png)
+![Frontend2](../image/Frontend2.png)
