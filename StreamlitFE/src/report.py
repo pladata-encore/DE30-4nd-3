@@ -178,7 +178,7 @@ def report():
                                 <div class="phase-content">
                                 <div class="compact">
                                     <span class="indented">Statistics = {stat:.4f}, p-value = {p_value1:.6f}</span><br>
-                                    <span class="indented">Result : Phase {i + 1} 데이터는 정규성을 만족한다</span>
+                                    <span class="indented">Phase {i + 1} 데이터는 정규성을 만족한다</span>
                                 </div></div>''', unsafe_allow_html=True)
             else:
                 st.markdown(f'<div class="phase-title2">Shapiro-Wilk Test</div>', unsafe_allow_html=True)
@@ -186,7 +186,7 @@ def report():
                                 <div class="phase-content">
                                 <div class="compact">
                                     <span class="indented">Statistics = {stat:.4f}, p-value = {p_value1:.6f}</span><br>
-                                    <span class="indented">Result : Phase {i + 1} 데이터는 정규성을 만족하지 않는다</span>
+                                    <span class="indented">Phase {i + 1} 데이터는 정규성을 만족하지 않는다</span>
                                 </div></div>''', unsafe_allow_html=True)
 
             if p_value2 <= 0.05:
@@ -195,7 +195,7 @@ def report():
                                 <div class="phase-content">
                                 <div class="compact">
                                     <span class="indented">Statistics = {round(corr, 4)}, p-value = {round(p_value2, 6)}</span><br>
-                                    <span class="indented">Result : Phase {i + 1} 두 변수는 상관관계가 존재한다</span>
+                                    <span class="indented">Phase {i + 1} 유저들의 기하학적 중심과 실제 whitezone의 중심이 생성되는 위치가 상관성을 갖는다</span>
                                 </div>
                                 </div></div>''', unsafe_allow_html=True)
             else:
@@ -204,7 +204,7 @@ def report():
                                 <div class="phase-content">
                                 <div class="compact">
                                     <span class="indented">Statistics = {round(corr, 4)}, p-value = {round(p_value2, 6)}</span><br>
-                                    <span class="indented">Result : Phase {i + 1} 두 변수는 상관관계가 존재하지 않는다</span>
+                                    <span class="indented">Phase {i + 1} 유저들의 기하학적 중심과 실제 whitezone의 중심이 생성되는 위치가 상관성을 갖지 않는다</span>
                                 </div>
                                 </div></div>''', unsafe_allow_html=True)
 
